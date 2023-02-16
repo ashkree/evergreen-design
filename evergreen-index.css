@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     padding:0;
@@ -11,7 +15,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, small {
-    font-family: 'Libre Baskerville', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .light {
@@ -35,18 +39,29 @@ p, small {
     background-color: #016838;
 }
 
-.evergreen-card {
-    width: 18rem;
-    height: 24rem;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    overflow: hidden;
+.evergreen-events-card, .evergreen-officers-card {
 
+    width: 18rem;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    background: transparent;
     position: relative;
 }
 
-.evergreen-card-img-container, .evergreen-card-body {
+.evergreen-events-card {
+    overflow: hidden;
+    height: 24rem;
+
+}
+
+.evergreen-officers-card {
+    height: 21rem;
+
+}
+
+.evergreen-card-img, .evergreen-card-body {
     position: absolute;
     width: 18rem;
 }
@@ -56,24 +71,54 @@ p, small {
     max-width: 18rem;
 }
 
-.evergreen-card-img-container {
+.evergreen-events-card  > .evergreen-card-img-container {
 
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
 
-    top: 20px;
+    top: 0px;
+    left: 0px;
     max-width: 18rem;
     overflow: hidden;
 }
 
 
-.evergreen-card-body {
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 0px 20px 20px 20px;
+.evergreen-events-card  > .evergreen-card-body {
+    -webkit-border-radius: 0px 15px 15px 15px;
+    -moz-border-radius: 0px 15px 15px 15px;
+    border-radius: 0px 15px 15px 15px;
 
-    top: 175px;
+    top: 150px;
+    left: 0px;
+    bottom: 0px;
     background-color: #aaaaaa;
+
+}
+
+.evergreen-officers-card  > .evergreen-card-img {
+
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    top: 0px;
+    left: 0px;
+    max-width: 18rem;
+    transform: scale(0.95);
+    z-index: 1;
+}
+
+
+.evergreen-officers-card  > .evergreen-card-body {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    top: 150px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #aaaaaa;
+    z-index: 0;
 
 }
