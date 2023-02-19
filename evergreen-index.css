@@ -122,3 +122,7 @@ p, small {
     z-index: 0;
 
 }
+
+.btn.btn-pill {
+    border-radius: 100px;
+}
